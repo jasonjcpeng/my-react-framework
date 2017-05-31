@@ -5,7 +5,7 @@
   "scripts": {
     "dist": "webpack",
     "start": "webpack-dev-server",
-    "less": "less-watch-compiler ./static/less ./static",
+    "less": "watch-less-do-more -i ./static/less/style.less -o ./static/style.css",
     "serve": "browser-sync start --server --files \"./static/style.css, ./static/*.html\"",
     "static": "parallelshell \"npm run serve\" \"npm run less\"",
     "all": "parallelshell \"npm run serve\" \"npm run less\" \"npm run start\""
@@ -18,9 +18,9 @@
     "prop-types": "^15.5.10",
     "qs": "^6.4.0",
     "react": "^15.5.4",
-    "react-addons-css-transition-group": "^15.5.2",
     "react-dom": "^15.5.4",
     "react-redux": "^4.4.5",
+    "react-transition-group": "^1.1.3",
     "redux": "^3.5.2",
     "redux-saga": "^0.15.3",
     "redux-thunk": "^2.1.0"
@@ -45,7 +45,7 @@
     "json-loader": "^0.5.4",
     "less": "^2.7.2",
     "less-loader": "^4.0.3",
-    "less-watch-compiler": "^1.4.4",
+    "watch-less-do-more": "^0.2.0",
     "node-libs-browser": "^1.0.0",
     "parallelshell": "^2.0.0",
     "postcss-loader": "^1.2.2",
