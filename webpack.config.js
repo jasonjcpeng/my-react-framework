@@ -1,7 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var autoprefixer = require('autoprefixer');
 var Tittle = 'framework';
 module.exports = {
     //不打包的基本库，可以做CDN加速
@@ -29,12 +28,12 @@ module.exports = {
         loaders: [
             {
                 test: /\.js$/,
-                loaders: ['babel'],
+                loaders: ['babel-loader'],
                 exclude: /node_modules/
             },
             {
                 test: /\.less$/,
-                loader: 'style-loader!css-loader!postcss-loader!less-loader'
+                loader: 'style-loader!css-loader!less-loader'
             },
             {
                 test: /\.css$/,
@@ -50,7 +49,6 @@ module.exports = {
             }
         ]
     },
-    postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
     output: {
         path: 'dist/',
         filename: 'js/[chunkHash:32].js',
