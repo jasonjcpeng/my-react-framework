@@ -5,7 +5,7 @@
   "scripts": {
     "dist": "webpack",
     "start": "webpack-dev-server",
-    "less": "watch-less-do-more -i ./static/less/style.less -o ./static/style.css",
+    "less": "watcher-lessc -i static/less/style.less -o static/style.css -p ./static/less -d ./static/less",
     "serve": "browser-sync start --server --files \"./static/style.css, ./static/*.html\"",
     "static": "parallelshell \"npm run serve\" \"npm run less\"",
     "all": "parallelshell \"npm run serve\" \"npm run less\" \"npm run start\""
@@ -44,7 +44,7 @@
     "json-loader": "^0.5.4",
     "less": "^2.7.2",
     "less-loader": "^4.0.3",
-    "watch-less-do-more": "^0.2.0",
+    "watcher-lessc": "^0.2.0",
     "node-libs-browser": "^1.0.0",
     "parallelshell": "^2.0.0",
     "postcss-loader": "^1.2.2",
