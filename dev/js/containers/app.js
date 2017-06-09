@@ -121,22 +121,11 @@ class NodeList{
 
 }
 
+
 class App extends React.Component {
     
     render() {
         let {actionClick,click} =this.props;
-        let list = new NodeList();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        list.add(4);
-        list.add(5);
-        list.add(6);
-        list.add(7);
-        list.makeLoop(3);
-        console.log(list);
-        console.log(list.hasLoop());
-        console.log(list.loopLength());
         return <div className="app">
             <h1>{click.get(0)}</h1>
             <button onClick={
