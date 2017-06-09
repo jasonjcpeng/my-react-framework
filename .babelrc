@@ -7,6 +7,15 @@
   "env": {
     "development": {
       "presets": []
+    },
+    "production": {
+      "plugins": ["transform-react-remove-prop-types"
+//      ,{
+//          "mode": true,
+ //         "removeImport":true,
+ //         "ignoreFilenames": ["node_modules"]
+ //       }
+      ]
     }
   },
   "plugins": [
