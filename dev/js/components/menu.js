@@ -37,6 +37,7 @@ class Menu extends React.Component {
             { /*language=CSS*/ }
             <style jsx>{`li{
                 line-height: 20px;
+                cursor: pointer;
             }`}
             </style>
         </div>
