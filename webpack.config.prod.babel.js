@@ -43,7 +43,7 @@ const Module = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'js/[chunkHash:32].js',
-        chunkFilename : 'js/[chunkHash:32]-[id].js'
+        chunkFilename : 'js/[chunkHash:32].js'
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -59,6 +59,9 @@ const Module = {
             }
         }),
         new webpack.optimize.UglifyJsPlugin({
+            output: {
+                comments: false,
+            },
             compress: {
                 warnings: false
             }

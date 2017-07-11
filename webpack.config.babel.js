@@ -52,6 +52,7 @@ const Module = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'js/[chunkHash:32].js',
         chunkFilename : 'js/[name]-[id].js'
+
     },
     plugins: [
         new HtmlWebpackPlugin({
