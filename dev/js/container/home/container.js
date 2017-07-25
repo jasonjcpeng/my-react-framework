@@ -40,10 +40,13 @@ class App extends React.Component {
     render(){
         return <div style={{textAlign:'center'}} ><h1>Home</h1>
             <ul>
+                <li><Link to="/LifeCycle">To Life Cycle</Link></li>
                 <li><Link to="/About&It_is_a_message_from_home_page">To About</Link></li>
             </ul>
-            <Menu content={this.props.asyncContent}/>
             <a style={{cursor:'pointer',color:'blue'}} onClick={e=>{this.props.actionShowMenu()}}>click to toggle menu</a>
+            <hr style={{backgroundColor:'#000',height:'2px'}}/>
+            <Menu content={this.props.asyncContent}/>
+            <hr style={{backgroundColor:'#000',height:'2px'}}/>
             {this.createNewMenu()}
         </div>
     }
@@ -61,7 +64,7 @@ function state(state) {
         showMenu:state.home.get('showMenu'),
         content:state.home.get('content'),
         asyncContent:state.home.get('asyncContent'),
-        selectContent:state.home.get('selectContent')
+        selectContent:state.home.get('$selectContent')
     })
 }
 

@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux'
-import home from './container/home/store'
-import about from './container/about/store'
+import home from './container/home/reducer'
+import about from './container/about/reducer'
 
 
 const allReducers = combineReducers({

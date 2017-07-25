@@ -1,6 +1,7 @@
 import path from 'path'
 import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import HappyPack from 'happypack'
 const Title = 'framework'
 
 const Module = {
@@ -27,7 +28,7 @@ const Module = {
         rules: [
             {
                 test: /\.js$/,
-                loaders: ['babel-loader'],
+                loaders: ['happypack/loader'],
                 exclude: /node_modules/
             },
             {
@@ -55,16 +56,21 @@ const Module = {
 
     },
     plugins: [
+        new HappyPack({
+            // loaders is the only required parameter:
+            loaders: [ 'babel-loader' ],
+            // customize as needed, see Configuration below
+        }),
         new HtmlWebpackPlugin({
             title: Title,
             template: 'dev/index.html',
             filename: 'index.html',
             inject: 'body',
             chunks: ['index']
-        }),
-       /*  //生成公共文件
+        })
+         /*//生成公共文件
         new webpack.optimize.CommonsChunkPlugin({
-         name:'vendor',
+         name:'vendor-[chunkHash:16]',
          minChunks: Infinity,
          }),*/
     ]

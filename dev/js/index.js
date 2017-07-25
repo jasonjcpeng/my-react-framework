@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
 import configCreateStore from './config/config-create-strore'
-import allReducers from './reducer-index'
+import allReducers from './store'
 import RouterIndex from './router'
 import '../less/style.less'
 
