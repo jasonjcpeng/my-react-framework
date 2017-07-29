@@ -10,23 +10,23 @@ class LifeCycle extends React.PureComponent{
         this.state = {
             flag:Math.random()
         }
-        //alert('Constructor(props,context,updater)')
+        alert('Constructor(props,context,updater)')
     }
 
     componentWillMount() {
-        //alert('ComponentWillMount()')
+        alert('ComponentWillMount()')
     }
 
     componentDidMount() {
-        //alert('componentDidMount()')
+        alert('componentDidMount()')
     }
 
     componentWillReceiveProps(nextProps, nextContext) {
-        //alert('componentWillReceiveProps(nextProps,nextContext)')
+        alert('componentWillReceiveProps(nextProps,nextContext)')
     }
 
     /*shouldComponentUpdate(nextProps, nextState, nextContext) {
-        //alert('shouldComponentUpdate(nextProps, nextState, nextContext)')
+        alert('shouldComponentUpdate(nextProps, nextState, nextContext)')
     }*/
 
     componentWillUpdate(nextProps, nextState, nextContext, transaction) {
@@ -34,15 +34,15 @@ class LifeCycle extends React.PureComponent{
     }
 
     componentDidUpdate(prevProps, prevState, prevContext, rootNode) {
-        //alert('componentDidUpdate(prevProps,prevState,prevContext,rootNode)')
+        alert('componentDidUpdate(prevProps,prevState,prevContext,rootNode)')
     }
 
     componentWillUnmount(){
-        //alert('componentWillUnmount()')
+        alert('componentWillUnmount()')
     }
 
     render() {
-        //alert('Render()')
+        alert('Render()')
         return <div>
             <h1>Life Cycle Component!</h1>
             <h2>Random Number:{this.props.number.number}</h2>

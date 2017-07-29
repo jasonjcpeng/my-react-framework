@@ -22,6 +22,8 @@ class Menu extends React.Component {
     }
 
     render() {
+        let changeBackgroundColor = this.state.changeBackgroundColor
+        let defaultBackgroundColor = this.state.defaultBackgroundColor
         return <div>
             <ul>
                 {
@@ -29,7 +31,7 @@ class Menu extends React.Component {
                         return <li onClick={e => {
                             this.handleChangeBackgroundColor(k)
                         }}
-                                   style={{backgroundColor: k === this.state.activeKey ? this.state.changeBackgroundColor : this.state.defaultBackgroundColor}}
+                                   style={{backgroundColor: k === this.state.activeKey ? changeBackgroundColor : defaultBackgroundColor}}
                                    key={k}>{v}</li>
                     })
                 }

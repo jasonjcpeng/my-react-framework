@@ -11,7 +11,7 @@ class Container extends React.Component{
         super()
         this.state = {
             show:true,
-            p:{number:3}
+            p:this.p
         }
     }
 
@@ -21,7 +21,7 @@ class Container extends React.Component{
                 <li onClick={e=>{
                     this.p.number=4
                     this.setState({
-                        p:{number:3}
+                        p:this.p
                     })
                 }}>Send props to LifeCycle component</li>
                 <li onClick={e=>{
