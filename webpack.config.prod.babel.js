@@ -17,6 +17,14 @@ const Module = {
         vendor: ['react', 'react-dom','immutable','redux','redux-thunk','react-redux','react-router-dom','isomorphic-fetch','react-transition-group','qs','prop-types'],
         index: './dev/js/index.js'
     },
+     resolve:{
+        alias: {
+            "api":path.resolve(__dirname,'dev/js/api/api.js'),
+            "ARC":path.resolve(__dirname,'dev/js/_tools/action-and-reducer-creator'),
+            "ALC":path.resolve(__dirname,'dev/js/_tools/async-load-component'),
+            "HOC":path.resolve(__dirname,'dev/js/_tools/high-order-components'),
+        }
+    },
     module: {
         loaders: [
             {

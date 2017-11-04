@@ -8,7 +8,7 @@ import {
     Switch,
     Route,
 } from 'react-router-dom'
-import ALC from './container/_tools/async-load-component'
+import ALC from 'ALC'
 import App from 'bundle-loader?lazy&name=app!./container/home/container'
 import About from 'bundle-loader?lazy&name=about!./container/about/container'
 import LifeCycleContainer from 'bundle-loader?lazy&name=lifecyclecontainer!./container/life-cycle/container'

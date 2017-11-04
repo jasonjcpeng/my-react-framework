@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import * as ActionCreators from './action'
-import HOC from '../_tools/high-order-components'
+import HOC from 'HOC'
 import PropTypes from 'prop-types'
 
 

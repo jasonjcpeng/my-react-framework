@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server",
-    "build": "webpack --config webpack.config.prod.babel.js",
+    "dist": "webpack --config webpack.config.prod.babel.js",
     "less": "watcher-lessc -i static/less/style.less -o static/style.css -p ./static/less -d ./static/less",
     "serve": "browser-sync start --server --files \"./static/style.css, ./static/*.html\"",
     "static": "parallelshell \"npm run serve\" \"npm run less\"",
@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.17.0",
+    "bodymovin": "^4.12.3",
     "bundle-loader": "^0.5.5",
     "immutable": "^3.8.1",
     "isomorphic-fetch": "^2.2.1",

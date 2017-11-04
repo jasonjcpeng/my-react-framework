@@ -3,7 +3,7 @@
  * Created by pengjingcheng on 2017/7/10.
  */
 import {Map,List} from 'immutable'
-import ARC from '../_tools/action-and-reducer-creator'
+import ARC from 'ARC'
 
 const $SelectContent = (state)=>{
     return  state.get('content').concat(state.get('asyncContent'))

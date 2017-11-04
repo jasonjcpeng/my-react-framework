@@ -1,6 +1,6 @@
 import * as Fetch from './fetch'
 import {isOnline} from '../config/config'
-
+import axios from 'axios'
 /*
  * 整合包装异步获取数据的方法，最终返回一个Promise
  * @param
@@ -41,6 +41,12 @@ const createFetchPromise = (api, callBack, args = '', method = 'GET')=> {
         )
     })
 }
+const api = {
+    getData(){
+        return axios.get('/data',{dataType:'json'});
+    }
+
+}
 
 export const testForGetContent = ()=>{
     return new Promise((res,rej)=>{
@@ -49,3 +55,6 @@ export const testForGetContent = ()=>{
         },3000)
     })
 }
+
+
+export default api;
