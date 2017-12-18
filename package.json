@@ -54,6 +54,7 @@
     "json-loader": "^0.5.4",
     "less": "^2.7.2",
     "less-loader": "^4.0.3",
+    "mockjs": "^1.0.1-beta3",
     "node-libs-browser": "^1.0.0",
     "parallelshell": "^2.0.0",
     "postcss-loader": "^1.2.2",
