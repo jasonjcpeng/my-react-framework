@@ -6,7 +6,8 @@ module.exports = (payload) => {
   return [
     new HtmlWebpackPlugin({
       filename: "index.html",
-      template: path.resolve("./src/template/index.html")
+      dll: "dll/dll.dll.js",
+      template: path.resolve("src", "template", "index.html")
     }),
     new webpack.DefinePlugin(
       (() => {
