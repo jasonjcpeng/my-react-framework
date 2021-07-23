@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   resolve: {
@@ -11,8 +12,24 @@ module.exports = {
   },
   output: {
     path: path.resolve("dist", "dll"),
-    filename: "[name].dll.js",
+    filename: "[version].dll.js",
     library: "[name]_library"
+  },
+  optimization: {
+    minimizer: [
+      new TerserPlugin({
+        parallel: true,
+        terserOptions: {
+          format: {
+            comments: false // 删除注释
+          },
+          compress: {
+            pure_funcs: ["console.log"] // 删除Log
+          }
+        },
+        extractComments: false
+      })
+    ]
   },
   plugins: [
     new webpack.DllPlugin({

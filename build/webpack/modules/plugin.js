@@ -6,7 +6,7 @@ module.exports = (payload) => {
   return [
     new HtmlWebpackPlugin({
       filename: "index.html",
-      dll: "dll/dll.dll.js",
+      dll: process.env.NODE_ENV === "production" ? "dll/dll.dll.js" : undefined,
       template: path.resolve("src", "template", "index.html")
     }),
     new webpack.DefinePlugin(

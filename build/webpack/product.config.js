@@ -1,3 +1,6 @@
+const mode = "production";
+process.env.NODE_ENV = mode;
+
 const { merge } = require("webpack-merge");
 const DllReferencePlugin = require("webpack").DllReferencePlugin;
 const path = require("path");
@@ -6,9 +9,9 @@ const config = require(path.resolve("config", "pro"));
 const commonConfig = common({ config });
 
 module.exports = merge(commonConfig, {
-  mode: "production",
+  mode,
   output: {
-    filename: "bundle.[fullhash].js",
+    filename: "bundle.[contenthash].js",
     path: path.resolve("dist"),
     publicPath: undefined // CDN地址
   },
